@@ -1,0 +1,64 @@
+
+  
+  /* Zoomed Image */
+  .single-image.zoomed--image.zoom--horizontal {
+    height: 100vh;
+    max-height: 100vh;
+    position: relative;
+    white-space: nowrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    gap: 100px;
+  }
+  
+  .single-image.zoomed--image .single--image--wrapper {
+    height: 500px;
+  }
+  .single-image img{width: 100%;}
+  .single-image.zoomed--image > div {
+    display: inline-block;
+    width: 33.333333333%;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    overflow: hidden;
+  }
+  
+  .single-image.zoomed--image img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 100%;
+    -o-object-position: center;
+    object-position: center;
+  }
+  
+  .single-image.zoomed--image .zoomed {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 999;
+  }
+  
+  @media only screen and (max-width: 550px) {
+    .single-image.zoomed--image > div.zoomed--before,
+    .single-image.zoomed--image > div.zoomed--after {
+      display: none;
+    }
+  
+    .single-image.zoomed--image .zoomed {
+      width: 80%;
+    }
+  }
+  
